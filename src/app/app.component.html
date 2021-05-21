@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list" lines="full">
+          <ion-list-header>Inbox</ion-list-header>
+          <ion-note>hi@ionicframework.com</ion-note>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-avatar slot="start">
+                <img [src]="p.icon">
+              </ion-avatar>
+              <ion-label>{{ p.title }}</ion-label>
+              <ion-icon  slot="end" name="chevron-forward-outline"></ion-icon>
+              <!-- <ion-chip slot="end" outline>
+                <ion-label>10</ion-label>
+              </ion-chip> -->
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content" swipeBackEnabled="false" routerDirection="forward"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
