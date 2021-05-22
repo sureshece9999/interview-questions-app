@@ -1,4 +1,26 @@
 img {
-    height: 80px;
-    width:80px;
+    height: 70px;
+    width: 70px;
 }
+
+p {
+    font-weight: bold;
+    font-family: system-ui;
+    margin: 5px !important;
+    color:#5e5873;
+}
+
+ion-col {
+    text-align: center;
+}
+
+ion-content {
+    --background: #f8f8f8;
+}
+
+ion-card {
+    padding-top: 20px;
+    margin:0px;
+    padding-bottom: 10px;
+}
+

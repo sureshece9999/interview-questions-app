@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,19 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
- test = new Date().toString();
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  navigateToDetails(pageName: string) {
+    switch (pageName) {
+      case 'html':
+        this.router.navigateByUrl('/html');
+        break;
 
-  testDate() {
-    console.log(this.test);
-    let temp = this.test;
-    new Date(temp).setHours(0);
-    new Date(temp).setMinutes(0);
-    new Date(temp).setSeconds(0);
-    console.log(temp);
+      default:
+        break;
+    }
   }
 }
