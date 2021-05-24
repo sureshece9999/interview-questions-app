@@ -19,7 +19,9 @@ export class HomePage implements OnInit {
       case 'html':
         this.router.navigateByUrl('/html');
         break;
-
+      case 'angular':
+        this.router.navigateByUrl('/angular');
+        break;
       default:
         break;
     }

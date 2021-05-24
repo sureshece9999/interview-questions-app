@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'html',
     loadChildren: () => import('./pages/html/html.module').then( m => m.HtmlPageModule)
+  },
+  {
+    path: 'angular',
+    loadChildren: () => import('./pages/angular/angular.module').then( m => m.AngularPageModule)
   }
 ];
 
