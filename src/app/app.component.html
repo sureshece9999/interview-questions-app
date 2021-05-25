@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay" [swipeGesture]="false">
       <ion-content>
         <ion-list id="inbox-list" lines="full">
           <ion-list-header>Inbox</ion-list-header>
@@ -13,9 +13,6 @@
               </ion-avatar>
               <ion-label>{{ p.title }}</ion-label>
               <ion-icon  slot="end" name="chevron-forward-outline"></ion-icon>
-              <!-- <ion-chip slot="end" outline>
-                <ion-label>10</ion-label>
-              </ion-chip> -->
             </ion-item>
           </ion-menu-toggle>
         </ion-list>

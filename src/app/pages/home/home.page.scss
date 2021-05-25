@@ -7,7 +7,7 @@ p {
     font-weight: bold;
     font-family: system-ui;
     margin: 5px !important;
-    color:#5e5873;
+    color:#545454;
 }
 
 ion-col {
@@ -15,12 +15,13 @@ ion-col {
 }
 
 ion-content {
-    --background: #F8FCFD;
+    // --background: #F8FCFD;
 }
 
 ion-card {
     padding-top: 20px;
     margin:0px;
     padding-bottom: 10px;
+    background-color: #f8f8f8;
 }
 
